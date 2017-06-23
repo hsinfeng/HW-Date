@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Date </title>
+    </head>
+    <body>
+        <p>D. 輸入一個日期，用程式計算出當天是當年度的第幾天?</p>
+        
+        <input type="date" id="date" value="">
+        <button type="button" onclick="myfunction()" id="date1">計算天數</button>
+        <div id="demo"></div>
+        
+        
+        <script>
+         function myfunction(){
+            var x=document.getElementById("date").value;
+            var y=new Date(x);
+            var z=new Date(x);
+                z.setMonth(0);
+                z.setDate(1);
+            var a=(y-z)/(24*60*60*1000)+1;    //一天等於 1000*60*60*24 = 86400000 毫秒 
+            
+            document.getElementById("demo").innerHTML=a;
+                
+         }
+            
+            
+        </script>
+        
+        
+    </body>
+</html>
+
+
+               
+        
